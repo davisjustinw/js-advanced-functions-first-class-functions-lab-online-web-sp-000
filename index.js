@@ -1,23 +1,14 @@
 // Code your solution in this file!
-const returnFirstTwoDrivers =
-  drivers => drivers.slice( 0, 2 )
+const returnFirstTwoDrivers = drivers => drivers.slice(0,2)
 
-const returnLastTwoDrivers =
-  drivers => drivers.slice( -2 )
+const returnLastTwoDrivers = drivers => drivers.slice(-2)
 
-const selectingDrivers =
-  [returnFirstTwoDrivers, returnLastTwoDrivers]
+const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers]
 
-const createFareMultiplier =
-  multiplier =>
-  value =>
-  multiplier * value
+const createFareMultiplier = int => fare => fare * int
 
-const fareDoubler =
-  createFareMultiplier( 2 )
+const fareDoubler = fare => createFareMultiplier(2)(fare)
 
-const fareTripler =
-  createFareMultiplier( 3 )
+const fareTripler = fare => createFareMultiplier(3)(fare)
 
-const selectDifferentDrivers = ( arrayOfDrivers, foo ) =>
-  foo( arrayOfDrivers )
+const selectDifferentDrivers = (arrayOfDrivers, func) => func(arrayOfDrivers)
